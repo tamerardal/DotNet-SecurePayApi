@@ -12,7 +12,7 @@ public class DataGenerator
 			}
 			
 			context.Customers.AddRange(
-				new Customer{Name = "Tamer", Surname = "Ardal", Email = "tamerardal@frisbe.com", Password = "123456"}
+				new Customer{Name = "Tamer", Surname = "Ardal", Email = "tamerardal@frisbe.com", Password = "123456", CardNumber = "4110-5193-6107-2455"}
 			);
 			
 			context.Payments.AddRange(
