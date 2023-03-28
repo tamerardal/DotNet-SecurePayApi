@@ -16,7 +16,7 @@ public class DataGenerator
 			);
 			
 			context.Payments.AddRange(
-				new Payment{Title = "Gömlek", CustomerId = 1, PaymentDate = DateTime.Now}
+				new Payment{Title = "Gömlek", CustomerId = 1, PaymentDate = DateTime.Now, Price = 50}
 			);
 			
 			context.SaveChanges();

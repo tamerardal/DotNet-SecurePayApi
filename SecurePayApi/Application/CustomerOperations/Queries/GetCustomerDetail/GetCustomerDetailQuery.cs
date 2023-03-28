@@ -25,6 +25,7 @@ public class GetCustomerDetailQuery
 	}
 	public class CustomerDetailViewModel
 	{
+		public string Email { get; set; }
 		public string Name { get; set; }
 		public string Surname { get; set; }
 		public List<string> PurchasedGoods { get; set; }
