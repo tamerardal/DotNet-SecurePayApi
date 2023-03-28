@@ -15,8 +15,8 @@ public class DataGenerator
 				new Customer{Name = "Tamer", Surname = "Ardal", Email = "tamerardal@frisbe.com", Password = "123456", CardNumber = "4110-5193-6107-2455"}
 			);
 			
-			context.Payments.AddRange(
-				new Payment{Title = "Gömlek", CustomerId = 1, PaymentDate = DateTime.Now, Price = 50}
+			context.Products.AddRange(
+				new Product{Title = "Gömlek", Price = 50}
 			);
 			
 			context.SaveChanges();

@@ -5,7 +5,7 @@ public class CreatePaymentCommandValidator : AbstractValidator<CreatePaymentComm
 	public CreatePaymentCommandValidator()
 	{
 		RuleFor(c => c.Model.CustomerId).GreaterThan(0).NotNull();
-		RuleFor(c => c.Model.Title).MinimumLength(2).MaximumLength(20);
-		RuleFor(c => c.Model.Price).GreaterThan(0);
+		RuleFor(c => c.Model.ProductId).GreaterThan(0).NotNull();
+		
 	}
 }

@@ -15,21 +15,22 @@ public class CreatePaymentCommand
 	
 	public void Handle()
 	{
-		var payment = _context.Payments.SingleOrDefault(p => p.Title == Model.Title);
+		var product = _context.Products.SingleOrDefault(p => p.Id == Model.ProductId);
+		var customer = _context.Customers.SingleOrDefault(p => p.Id == Model.CustomerId);
 		
-		if (payment is not null)
-			throw new InvalidOperationException("Purchased failed!");
+		if(product is null && customer is null)
+			throw new InvalidOperationException("Payment is already used!");
 			
-		payment = _mapper.Map<Payment>(Model);
+		var result = _mapper.Map<Payment>(Model);
+		result.PaymentDate = DateTime.Now;
 		
-		_context.Payments.Add(payment);
+		_context.Payments.Add(result);
 		_context.SaveChanges();
 	}
 
 	public class CreatePaymentViewModel
 	{
 		public int CustomerId { get; set; }
-		public string Title { get; set; }
-		public int Price { get; set; }
+		public int ProductId { get; set; }
 	}
 }

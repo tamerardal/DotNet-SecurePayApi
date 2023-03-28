@@ -15,7 +15,7 @@ public class GetCustomerDetailQuery
 	
 	public CustomerDetailViewModel Handle()
 	{
-		var customer = _context.Customers.Include(p => p.Payment).SingleOrDefault(c => c.Id == CustomerID);
+		var customer = _context.Customers.Include(p => p.Payment).ThenInclude(p => p.Product).SingleOrDefault(c => c.Id == CustomerID);
 		
 		if(customer is null)
 			throw new InvalidOperationException("ID's not correct!");
@@ -29,6 +29,6 @@ public class GetCustomerDetailQuery
 		public string Name { get; set; }
 		public string Surname { get; set; }
 		public string CardNumber { get; set; }
-		public List<string> PurchasedGoods { get; set; }
+		public List<string> PurchasedProducts { get; set; }
 	}
 }
