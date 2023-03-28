@@ -16,7 +16,7 @@ public class DataGenerator
 			);
 			
 			context.Payments.AddRange(
-				new Payment{CustomerId = 1, CardName = "Yapıkredi Kartım", CardNumber = "1234123412341234", Name = "Tamer", Surname = "Ardal", EndDate = DateTime.Now.AddYears(5)}
+				new Payment{Title = "Gömlek", CustomerId = 1, PaymentDate = DateTime.Now}
 			);
 			
 			context.SaveChanges();

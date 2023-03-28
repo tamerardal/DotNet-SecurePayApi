@@ -8,6 +8,6 @@ public class Customer
 	public string Surname { get; set; }
 	public string Email { get; set; }
 	public string Password { get; set; }
-	public virtual ICollection<Payment> PaymentMethods { get; set; }
+	public virtual ICollection<Payment> Payment { get; set; }
 	public bool IsActive { get; set; } = true;
 }

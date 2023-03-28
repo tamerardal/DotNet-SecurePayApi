@@ -15,10 +15,10 @@ public class CreatePaymentCommand
 	
 	public void Handle()
 	{
-		var payment = _context.Payments.SingleOrDefault(p => p.CardNumber == Model.CardNumber);
+		var payment = _context.Payments.SingleOrDefault(p => p.Title == Model.Title);
 		
 		if (payment is not null)
-			throw new InvalidOperationException("Card number is already used!");
+			throw new InvalidOperationException("Purchased failed!");
 			
 		payment = _mapper.Map<Payment>(Model);
 		
@@ -29,10 +29,6 @@ public class CreatePaymentCommand
 	public class CreatePaymentViewModel
 	{
 		public int CustomerId { get; set; }
-		public string CardName { get; set; }
-		public string CardNumber { get; set; }
-		public string Name { get; set; }
-		public string Surname { get; set; }
-		public DateTime EndDate { get; set; }
+		public string Title { get; set; }
 	}
 }

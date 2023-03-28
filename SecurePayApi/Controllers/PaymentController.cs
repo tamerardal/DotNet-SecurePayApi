@@ -16,7 +16,7 @@ public class PaymentController : ControllerBase
 	}
 	
 	[HttpPost]
-	public IActionResult AddPayment([FromBody] CreatePaymentViewModel newPayment)
+	public IActionResult PurchasedGoods([FromBody] CreatePaymentViewModel newPayment)
 	{
 		CreatePaymentCommand command = new CreatePaymentCommand(_context, _mapper);
 		command.Model = newPayment;

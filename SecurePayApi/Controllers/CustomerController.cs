@@ -22,6 +22,16 @@ public class CustomerController : ControllerBase
 		
 		return Ok(query.Handle());
 	}
+	
+	[HttpGet("{id}")]
+	public IActionResult GetCustomerDetail(int id)
+	{
+		GetCustomerDetailQuery query = new GetCustomerDetailQuery(_context, _mapper);
+		query.CustomerID = id;
+		
+		return Ok(query.Handle());
+	}
+
 	[HttpPost]
 	public IActionResult AddCustomer([FromBody] CreateCustomerViewModel newCustomer)
 	{

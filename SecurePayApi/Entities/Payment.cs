@@ -6,9 +6,6 @@ public class Payment
 	public int Id { get; set; }
 	public int CustomerId { get; set; }
 	public Customer Customer { get; set; }
-	public string CardName { get; set; }
-	public string CardNumber { get; set; }
-	public string Name { get; set; }
-	public string Surname { get; set; }
-	public DateTime EndDate { get; set; }
+	public string Title { get; set; }
+	public DateTime PaymentDate { get; set; } = DateTime.Now;
 }

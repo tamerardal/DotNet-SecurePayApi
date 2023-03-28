@@ -13,7 +13,7 @@ public class GetCustomersQuery
 	
 	public List<CustomersViewModel> Handle()
 	{
-		var customers = _context.Customers.Include(p => p.PaymentMethods).Where(c => c.IsActive == true).OrderBy(c => c.Id).ToList<Customer>();
+		var customers = _context.Customers.Include(p => p.Payment).Where(c => c.IsActive == true).OrderBy(c => c.Id).ToList<Customer>();
 		List<CustomersViewModel> viewModels = _mapper.Map<List<CustomersViewModel>>(customers);
 		
 		return viewModels;
@@ -23,6 +23,5 @@ public class GetCustomersQuery
 	{
 		public string Name { get; set; }
 		public string Surname { get; set; }
-		public List<string> PaymentMethods { get; set; }
 	}
 }

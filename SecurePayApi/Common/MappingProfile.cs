@@ -6,9 +6,9 @@ public class MappingProfile : Profile
 	{
 		//Customer Mapping
 		CreateMap<CreateCustomerCommand.CreateCustomerViewModel, Customer>();
-		CreateMap<Customer, GetCustomersQuery.CustomersViewModel>()
-		.ForMember(dest => dest.PaymentMethods, opt => opt.MapFrom(src => src.PaymentMethods.Select(x => x.CardName)));
-		
+		CreateMap<Customer, GetCustomersQuery.CustomersViewModel>();
+		CreateMap<Customer, GetCustomerDetailQuery.CustomerDetailViewModel>()
+		.ForMember(dest => dest.PurchasedGoods, opt => opt.MapFrom(src => src.Payment.Select(x => x.Title + " isimli ürünü " + x.PaymentDate.ToShortDateString() + " tarihinde satın almıştır.")));		
 		//Payment Mapping
 		CreateMap<CreatePaymentCommand.CreatePaymentViewModel, Payment>();
 	}
