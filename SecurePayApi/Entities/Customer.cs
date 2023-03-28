@@ -9,4 +9,5 @@ public class Customer
 	public string Email { get; set; }
 	public string Password { get; set; }
 	public virtual ICollection<Payment> PaymentMethods { get; set; }
+	public bool IsActive { get; set; } = true;
 }

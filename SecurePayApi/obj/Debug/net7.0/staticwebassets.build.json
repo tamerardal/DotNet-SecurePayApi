@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "3VcGJwTp2UXs6+fox+pSkD5YiCcS5o0Qb7hVrxBRbAo=",
+  "Source": "SecurePayApi",
+  "BasePath": "_content/SecurePayApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
