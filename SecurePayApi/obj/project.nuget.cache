@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gLLoZnbvEYROWa1foZ9Dr3gPZ4ylejX1jGM9JEDmmXMgSLjMy9O/mvpI+UD8zVK1TL8SdBxVLhaMJK1T7fgmxw==",
+  "dgSpecHash": "rY4y0ahzLaBfLMX0J3uKX45jFgfbTKyKgU8efCirvy+nBCnr7MiNiN+qdHkbkVZrRWz1pJ8OGqH9E5asShMOIw==",
   "success": true,
   "projectFilePath": "D:\\Frisbe-DotNet\\SecurePayApi\\SecurePayApi.csproj",
   "expectedPackageFiles": [
@@ -23,6 +23,7 @@
     "C:\\Users\\tamer\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
     "C:\\Users\\tamer\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\tamer\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
+    "C:\\Users\\tamer\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\tamer\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "C:\\Users\\tamer\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
     "C:\\Users\\tamer\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",

@@ -37,3 +37,4 @@ D:\Frisbe-DotNet\SecurePayApi\obj\Debug\net7.0\refint\SecurePayApi.dll
 D:\Frisbe-DotNet\SecurePayApi\obj\Debug\net7.0\SecurePayApi.pdb
 D:\Frisbe-DotNet\SecurePayApi\obj\Debug\net7.0\SecurePayApi.genruntimeconfig.cache
 D:\Frisbe-DotNet\SecurePayApi\obj\Debug\net7.0\ref\SecurePayApi.dll
+D:\Frisbe-DotNet\SecurePayApi\bin\Debug\net7.0\Newtonsoft.Json.dll
