@@ -1,4 +1,5 @@
 using AutoMapper;
+using static GetPaymentsQuery;
 
 public class MappingProfile : Profile
 {
@@ -12,5 +13,9 @@ public class MappingProfile : Profile
 		
 		//Payment Mapping
 		CreateMap<CreatePaymentCommand.CreatePaymentViewModel, Payment>();
+		CreateMap<Payment, PaymentListViewModel>()
+		.ForMember(dest => dest.Customer, opt => opt.MapFrom(src => src.Customer.Name + " " + src.Customer.Surname))
+		.ForMember(dest => dest.Product, opt => opt.MapFrom(src => src.Product.Title + " " + src.Product.Price + "₺"));
+		
 	}
 }

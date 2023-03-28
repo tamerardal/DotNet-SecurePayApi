@@ -16,6 +16,14 @@ public class PaymentController : ControllerBase
 		_mapper = mapper;
 	}
 	
+	[HttpGet]
+	public IActionResult GetPayments()
+	{
+		GetPaymentsQuery query = new GetPaymentsQuery(_context, _mapper);
+		
+		return Ok(query.Handle());
+	}
+
 	[HttpPost]
 	public IActionResult PurchasedGoods([FromBody] CreatePaymentViewModel newPayment)
 	{
