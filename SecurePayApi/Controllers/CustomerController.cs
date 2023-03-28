@@ -1,4 +1,5 @@
 using AutoMapper;
+using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using static CreateCustomerCommand;
 
@@ -38,6 +39,9 @@ public class CustomerController : ControllerBase
 		CreateCustomerCommand command = new CreateCustomerCommand(_context, _mapper);
 		
 		command.Model = newCustomer;
+		
+		CreateCustomerCommandValidator validator = new CreateCustomerCommandValidator();
+		validator.ValidateAndThrow(command);
 		
 		command.Handle();
 		

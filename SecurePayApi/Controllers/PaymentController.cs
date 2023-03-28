@@ -1,4 +1,5 @@
 using AutoMapper;
+using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using static CreatePaymentCommand;
 
@@ -20,6 +21,9 @@ public class PaymentController : ControllerBase
 	{
 		CreatePaymentCommand command = new CreatePaymentCommand(_context, _mapper);
 		command.Model = newPayment;
+		
+		CreatePaymentCommandValidator validator = new CreatePaymentCommandValidator();
+		validator.ValidateAndThrow(command);
 		
 		command.Handle();
 		return Ok();
