@@ -6,6 +6,5 @@ public class CreatePaymentCommandValidator : AbstractValidator<CreatePaymentComm
 	{
 		RuleFor(c => c.Model.CustomerId).GreaterThan(0).NotNull();
 		RuleFor(c => c.Model.ProductId).GreaterThan(0).NotNull();
-		
 	}
 }
