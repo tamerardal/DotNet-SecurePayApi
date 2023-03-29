@@ -5,6 +5,10 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurePayApi", "SecurePayApi\SecurePayApi.csproj", "{53695ECB-B96C-48F5-921F-03D9C793CAEB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{312342F9-7F86-4B75-A9E1-9B0DEA5C76B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurePayApi.UnitTest", "Tests\SecurePayApi.UnitTest\SecurePayApi.UnitTest.csproj", "{07D6126C-533A-4F53-B5DD-1308FF490EBD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,12 @@ Global
 		{53695ECB-B96C-48F5-921F-03D9C793CAEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53695ECB-B96C-48F5-921F-03D9C793CAEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53695ECB-B96C-48F5-921F-03D9C793CAEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07D6126C-533A-4F53-B5DD-1308FF490EBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07D6126C-533A-4F53-B5DD-1308FF490EBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07D6126C-533A-4F53-B5DD-1308FF490EBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07D6126C-533A-4F53-B5DD-1308FF490EBD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{07D6126C-533A-4F53-B5DD-1308FF490EBD} = {312342F9-7F86-4B75-A9E1-9B0DEA5C76B0}
 	EndGlobalSection
 EndGlobal
