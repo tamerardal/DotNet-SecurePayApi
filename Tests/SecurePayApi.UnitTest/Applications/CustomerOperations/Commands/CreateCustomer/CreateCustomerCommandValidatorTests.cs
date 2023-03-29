@@ -8,12 +8,12 @@ public class CreateCustomerCommandValidatorTests : IClassFixture<CommonTestFixtu
 	CreateCustomerCommandValidator validator = new CreateCustomerCommandValidator();
 	
 	[Theory]
-	[InlineData("a", "b", "tamer@co", "123", "123423-5213-1235-231")]
-	[InlineData(" ", "", "tamer@", "asd", "123423--1235-231")]
-	[InlineData("", " ", "tamerco@", " ", "1234-    -1234-1234")]
-	[InlineData("a", "bwe", "tamer.com", "", "123423")]
-	[InlineData("a", "bwe", " ", "a", "123423")]
-	public void WhenInvalidInputsAreGiven_Validator_ShouldBeReturnErrors(string name, string surname, string email, string password, string cardNumber)
+	[InlineData("a", "b", "tamer@co", "123")]
+	[InlineData(" ", "", "tamer@", "asd")]
+	[InlineData("", " ", "tamerco@", " ")]
+	[InlineData("a", "bwe", "tamer.com", "")]
+	[InlineData("a", "bwe", " ", "a")]
+	public void WhenInvalidInputsAreGiven_Validator_ShouldBeReturnErrors(string name, string surname, string email, string password)
 	{
 		command.Model = new CreateCustomerViewModel()
 		{
@@ -21,7 +21,6 @@ public class CreateCustomerCommandValidatorTests : IClassFixture<CommonTestFixtu
 			Surname = "",
 			Email = "",
 			Password = "",
-			CardNumber = ""
 		};
 		
 		var result = validator.Validate(command);
@@ -38,7 +37,6 @@ public class CreateCustomerCommandValidatorTests : IClassFixture<CommonTestFixtu
 			Surname = "Ardal",
 			Email = "tamerardal@frisbe.com",
 			Password = "tamer123",
-			CardNumber = "4110-5193-6107-2455"
 		};
 		
 		var result = validator.Validate(command);

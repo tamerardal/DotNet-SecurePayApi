@@ -1,5 +1,6 @@
 using AutoMapper;
 using static GetPaymentsQuery;
+using static GetProductsQuery;
 
 public class MappingProfile : Profile
 {
@@ -17,5 +18,8 @@ public class MappingProfile : Profile
 		.ForMember(dest => dest.Customer, opt => opt.MapFrom(src => src.Customer.Name + " " + src.Customer.Surname))
 		.ForMember(dest => dest.Product, opt => opt.MapFrom(src => src.Product.Title + " " + src.Product.Price + "₺"));
 		
+		//Product Mapping
+		CreateMap<Product, GetProductsViewModel>()
+		.ForMember(dest => dest.Price, opt => opt.MapFrom(src => src.Price + " ₺"));
 	}
 }

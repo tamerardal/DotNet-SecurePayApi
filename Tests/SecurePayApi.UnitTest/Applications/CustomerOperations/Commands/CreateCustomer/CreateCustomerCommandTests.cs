@@ -21,8 +21,7 @@ public class CreateCustomerCommandTests : IClassFixture<CommonTestFixture>
 			Name = "Şükrü",
 			Surname = "Yılmaz",
 			Email = "sukruyilmaz@frisbe.com",
-			Password = "test1234",
-			CardNumber = "4628-5996-9317-7649"
+			Password = "test1234"
 		};
 		
 		_context.Customers.Add(customer);
@@ -43,8 +42,7 @@ public class CreateCustomerCommandTests : IClassFixture<CommonTestFixture>
 			Name = "Ömer",
 			Surname = "Ardal",
 			Email = "omerardal@frisbe.com",
-			Password = "test1234",
-			CardNumber = "4085-3213-6171-3431"
+			Password = "test1234"
 		};
 		
 		command.Model = model;
@@ -57,6 +55,5 @@ public class CreateCustomerCommandTests : IClassFixture<CommonTestFixture>
 		customer.Email.Should().Be(model.Email);
 		customer.Name.Should().Be(model.Name);
 		customer.Surname.Should().Be(model.Surname);
-		customer.CardNumber.Should().Be(model.CardNumber);
 	}
 }

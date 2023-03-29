@@ -14,7 +14,7 @@ public class GetPaymentsQuery
 
 	public List<PaymentListViewModel> Handle()
 	{
-		var payments = _context.Payments.Include(p => p.Customer).Include(p => p.Product).OrderBy(p => p.PaymentDate).ToList();
+		var payments = _context.Payments.Include(p => p.Customer).Include(p => p.Product).OrderByDescending(p => p.PaymentDate).ToList();
 		List<PaymentListViewModel> viewModels = _mapper.Map<List<PaymentListViewModel>>(payments);
 		
 		return viewModels;

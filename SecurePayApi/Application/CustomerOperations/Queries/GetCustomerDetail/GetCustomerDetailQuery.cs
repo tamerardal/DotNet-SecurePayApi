@@ -27,8 +27,6 @@ public class GetCustomerDetailQuery
 	{
 		public string Email { get; set; }
 		public string Name { get; set; }
-		public string Surname { get; set; }
-		public string CardNumber { get; set; }
-		public List<string> PurchasedProducts { get; set; }
+		public string Surname { get; set; }		public List<string> PurchasedProducts { get; set; }
 	}
 }

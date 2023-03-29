@@ -32,5 +32,8 @@ public class CreatePaymentCommand
 	{
 		public int CustomerId { get; set; }
 		public int ProductId { get; set; }
+		public string NameSurname { get; set; }
+		public string CardNumber { get; set; }
+		public int CVV { get; set; }
 	}
 }

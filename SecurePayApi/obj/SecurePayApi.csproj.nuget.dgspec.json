@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Frisbe-DotNet\\SecurePayApi\\SecurePayApi.csproj": {}
+    "D:\\Frisbe-DotNet\\SecurePayApi\\SecurePayApi.csproj": {}
   },
   "projects": {
-    "d:\\Frisbe-DotNet\\SecurePayApi\\SecurePayApi.csproj": {
+    "D:\\Frisbe-DotNet\\SecurePayApi\\SecurePayApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Frisbe-DotNet\\SecurePayApi\\SecurePayApi.csproj",
+        "projectUniqueName": "D:\\Frisbe-DotNet\\SecurePayApi\\SecurePayApi.csproj",
         "projectName": "SecurePayApi",
-        "projectPath": "d:\\Frisbe-DotNet\\SecurePayApi\\SecurePayApi.csproj",
+        "projectPath": "D:\\Frisbe-DotNet\\SecurePayApi\\SecurePayApi.csproj",
         "packagesPath": "C:\\Users\\tamer\\.nuget\\packages\\",
-        "outputPath": "d:\\Frisbe-DotNet\\SecurePayApi\\obj\\",
+        "outputPath": "D:\\Frisbe-DotNet\\SecurePayApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
