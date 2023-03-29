@@ -12,6 +12,11 @@ public class CommonTestFixture
 		
 		Context.Database.EnsureCreated();
 		
+		Context.AddProducts();
+		Context.AddCustomers();
 		
+		Context.SaveChanges();
+		
+		Mapper = new MapperConfiguration(config => { config.AddProfile<MappingProfile>(); }).CreateMapper();
 	}
 }
