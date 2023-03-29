@@ -1,4 +1,5 @@
 .vscode/tasks.json
 .vscode/launch.json
+.vscode\settings.json
 SecurePayApi/bin/Debug/net7.0/SecurePayApi.dll
 SecurePayApi/bin/Debug/net7.0/SecurePayApi.pdb
