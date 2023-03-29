@@ -34,7 +34,7 @@ public class CreateCustomerCommandTests : IClassFixture<CommonTestFixture>
 	}
 	
 	[Fact]
-	public void WhenValidInputsAreGiven_Customer_ShouldBeCreated()
+	public void WhenValidInputsAreGiven_Customer_ShouldBeReturn()
 	{
 		CreateCustomerCommand command = new CreateCustomerCommand(_context, _mapper);
 		CreateCustomerViewModel model = new CreateCustomerViewModel()
