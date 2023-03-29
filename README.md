@@ -1,5 +1,4 @@
-# DotNet-SecurePayApi
-# Documentation
+# DotNet-SecurePayApi Documentation
 
 Projeye nasıl başladım?
   Projeye başlamadan önce proje içerisinde kullanılacak olan tablolar belirlendi. Relational Database kullanılacağı için
