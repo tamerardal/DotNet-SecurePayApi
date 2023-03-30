@@ -22,9 +22,7 @@ public class CreatePaymentCommandTests : IClassFixture<CommonTestFixture>
 		{
 			CustomerId = 1,
 			ProductId = 1,
-			NameSurname = "Tamer Ardal",
 			CardNumber = "4773-9205-5681-0238",
-			CVV = 600
 		};
 		
 		command.Model = model;
@@ -33,15 +31,13 @@ public class CreatePaymentCommandTests : IClassFixture<CommonTestFixture>
 		
 		var product = _context.Products.SingleOrDefault(p => p.Id == model.ProductId);
 		var customer = _context.Customers.SingleOrDefault(p => p.Id == model.CustomerId);
+		var cardNumber = _context.Customers.SingleOrDefault(p => p.Id == model.CustomerId && p.CardNumber == model.CardNumber);
 		
 		var result = _mapper.Map<Payment>(model);
 		
 		result.Should().NotBeNull();
 		result.CustomerId.Should().Be(model.CustomerId);
 		result.ProductId.Should().Be(model.ProductId);
-		result.CardNumber.Should().Be(model.CardNumber);
-		result.CVV.Should().Be(model.CVV);
-		result.NameSurname.Should().Be(model.NameSurname);
 	}
 	
 }

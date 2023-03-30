@@ -8,17 +8,14 @@ public class CreatePaymentCommandValidatorTests : IClassFixture<CommonTestFixtur
 	CreatePaymentCommandValidator validator = new CreatePaymentCommandValidator();
 	
 	[Theory]
-	[InlineData(-1, 0, "ali", "1234-1234-324-12345", 200)]
-	[InlineData(0, 20, "1", "1234-1234-324-", 1000)]
-	public void WhenInvalidInputsAreGiven_Validator_ShouldBeReturnErrors(int CustomerId, int ProductId, string NameSurname, string CardNumber, int CVV)
+	[InlineData(-1, 0, "ali")]
+	[InlineData(0, 20, "1")]
+	public void WhenInvalidInputsAreGiven_Validator_ShouldBeReturnErrors(int CustomerId, int ProductId)
 	{
 		command.Model = new CreatePaymentViewModel()
 		{
 			CustomerId = 0,
 			ProductId = 0,
-			NameSurname = "",
-			CardNumber = "",
-			CVV = 0
 		};
 		
 		var result = validator.Validate(command);
@@ -32,9 +29,6 @@ public class CreatePaymentCommandValidatorTests : IClassFixture<CommonTestFixtur
 		{
 			CustomerId = 1,
 			ProductId = 1,
-			NameSurname = "Tamer Ardal",
-			CardNumber = "4773-9205-5681-0238",
-			CVV = 593
 		};
 		
 		var result = validator.Validate(command);
