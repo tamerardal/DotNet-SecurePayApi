@@ -22,7 +22,7 @@ public class CreatePaymentCommandTests : IClassFixture<CommonTestFixture>
 		{
 			CustomerId = 1,
 			ProductId = 1,
-			CardNumber = "4773-9205-5681-0238",
+			CardNumber = "4173-2201-4403-6891",
 		};
 		
 		command.Model = model;

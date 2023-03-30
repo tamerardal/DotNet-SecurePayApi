@@ -8,8 +8,8 @@ public class CreatePaymentCommandValidatorTests : IClassFixture<CommonTestFixtur
 	CreatePaymentCommandValidator validator = new CreatePaymentCommandValidator();
 	
 	[Theory]
-	[InlineData(-1, 0, "ali")]
-	[InlineData(0, 20, "1")]
+	[InlineData(-1, 0)]
+	[InlineData(0, 20)]
 	public void WhenInvalidInputsAreGiven_Validator_ShouldBeReturnErrors(int CustomerId, int ProductId)
 	{
 		command.Model = new CreatePaymentViewModel()

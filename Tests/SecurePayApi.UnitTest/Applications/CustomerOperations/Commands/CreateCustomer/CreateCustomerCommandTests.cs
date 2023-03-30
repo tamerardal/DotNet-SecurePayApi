@@ -42,7 +42,9 @@ public class CreateCustomerCommandTests : IClassFixture<CommonTestFixture>
 			Name = "Ömer",
 			Surname = "Ardal",
 			Email = "omerardal@frisbe.com",
-			Password = "test1234"
+			Password = "test1234",
+			CardNumber = "4930-7273-8831-2857",
+			CVV = 700
 		};
 		
 		command.Model = model;
