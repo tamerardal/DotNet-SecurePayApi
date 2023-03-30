@@ -3,3 +3,4 @@
 .vscode\settings.json
 SecurePayApi/bin/Debug/net7.0/SecurePayApi.dll
 SecurePayApi/bin/Debug/net7.0/SecurePayApi.pdb
+SecurePayApi/obj/Debug/net7.0/project.razor.json
