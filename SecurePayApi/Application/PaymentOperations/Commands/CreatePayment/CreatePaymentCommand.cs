@@ -17,9 +17,12 @@ public class CreatePaymentCommand
 	{
 		var product = _context.Products.SingleOrDefault(p => p.Id == Model.ProductId);
 		var customer = _context.Customers.SingleOrDefault(p => p.Id == Model.CustomerId);
+		var cardNumber = _context.Customers.SingleOrDefault(p => p.Id == Model.CustomerId && p.CardNumber == Model.CardNumber);
 		
 		if(product is null && customer is null)
 			throw new InvalidOperationException("Payment is already used!");
+		if(cardNumber is null)
+			throw new InvalidOperationException("Credit card is not belong this customer!");
 			
 		var result = _mapper.Map<Payment>(Model);
 		result.PaymentDate = DateTime.Now;
@@ -32,8 +35,6 @@ public class CreatePaymentCommand
 	{
 		public int CustomerId { get; set; }
 		public int ProductId { get; set; }
-		public string NameSurname { get; set; }
 		public string CardNumber { get; set; }
-		public int CVV { get; set; }
 	}
 }

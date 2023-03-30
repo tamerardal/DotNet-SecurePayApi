@@ -15,13 +15,17 @@ public class CreateCustomerCommand
 	public void Handle()
 	{
 		var customer = _context.Customers.SingleOrDefault(x => x.Email == Model.Email);
+		var cardNumber = _context.Customers.SingleOrDefault(x => x.CardNumber == Model.CardNumber);
 		
 		if (customer is not null)
 			throw new InvalidOperationException("Email is already used!");
 			
-		customer = _mapper.Map<Customer>(Model);
+		if (cardNumber is not null)
+			throw new InvalidOperationException("Credit Card is used for another customer!");
+			
+		var result = _mapper.Map<Customer>(Model);
 		
-		_context.Customers.Add(customer);
+		_context.Customers.Add(result);
 		_context.SaveChanges();
 	}
 
@@ -31,6 +35,8 @@ public class CreateCustomerCommand
 		public string Surname { get; set; }
 		public string Email { get; set; }
 		public string Password { get; set; }
+		public string CardNumber { get; set; }
+		public int CVV { get; set; }
 		
 	}
 }
