@@ -52,10 +52,15 @@ public class CreateCustomerCommandTests : IClassFixture<CommonTestFixture>
 		FluentActions.Invoking(() => command.Handle()).Invoke();
 		
 		var customer = _context.Customers.SingleOrDefault(customer => customer.Email == model.Email);
+		var cardNumber = _context.Customers.SingleOrDefault(x => x.CardNumber == model.CardNumber);
 		
-		customer.Should().NotBeNull();
-		customer.Email.Should().Be(model.Email);
-		customer.Name.Should().Be(model.Name);
-		customer.Surname.Should().Be(model.Surname);
+		var result = _mapper.Map<Customer>(model);
+		
+		result.Should().NotBeNull();
+		result.Email.Should().Be(model.Email);
+		result.Name.Should().Be(model.Name);
+		result.Surname.Should().Be(model.Surname);
+		result.CardNumber.Should().Be(model.CardNumber);
+		result.CVV.Should().Be(model.CVV);
 	}
 }
